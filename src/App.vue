@@ -40,7 +40,7 @@ body,
 #app {
   padding: 0;
   margin: 0;
-  background-color: gainsboro;
+  background-color: #EEEEEE;
 }
 
 nav {

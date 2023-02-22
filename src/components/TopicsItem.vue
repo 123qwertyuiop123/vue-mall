@@ -48,7 +48,6 @@ type Props = {
 }
 let props = defineProps<Props>()
 onMounted(() => {
-    console.log(props.item);
 })
 </script>
 
@@ -109,9 +108,9 @@ onMounted(() => {
 .desc {
     padding-left: 20px;
     font-size: small;
-    color: gainsboro;
+    color: #EEEEEE;
     padding-bottom: 10px;
-    border-bottom: 1px solid gainsboro;
+    border-bottom: 1px solid #EEEEEE;
 }
 
 .action {
@@ -130,10 +129,11 @@ onMounted(() => {
         margin-right: 5px;
     }
 
-    .like .watch{
+    .like .watch {
         margin-left: 20px;
     }
-    .comments{
+
+    .comments {
         margin-right: 20px;
     }
 }

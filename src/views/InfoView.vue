@@ -29,7 +29,7 @@ let width = ref('87')
   .rect{
     width: 2%;
     height: 100%;
-    background-color: gainsboro;
+    background-color: #EEEEEE;
     z-index: 10;
   }
   .bar{
