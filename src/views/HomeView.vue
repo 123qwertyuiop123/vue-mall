@@ -20,6 +20,8 @@
       <div class="notify" :title="notify">{{ notify }}</div>
       <el-button size="mini" class="btn" @click="notifyDetail">详情</el-button>
     </div>
+    <!-- 商品 -->
+    <HomeItem title="品牌制造商" :more="true" :list-data="brandMakingList" :type-str="'brandMaking'"></HomeItem>
   </div>
 </template>
 
@@ -27,6 +29,7 @@
 
 import { ref, reactive } from "vue";
 import { useRouter } from "vue-router";
+import HomeItem from "../components/HomeItem.vue"
 
 const router = useRouter()
 let ImageBaseUrl = ref<string>('https://www.macrozheng.com/app/images/mainpage/')
@@ -80,12 +83,58 @@ let notify = ref('自营家电清洗服务上线')
 function notifyDetail():void{
   router.push('')
 }
+
+// 商品
+// 品牌制造商
+let brandMakingList = reactive<Array<any>>([
+  {
+    name:'WMF制造商',
+    image:ImageBaseUrl.value+'u87.png',
+    price:10,
+    route:''
+  },
+  {
+    name:'WMF制造商',
+    image:ImageBaseUrl.value+'u87.png',
+    price:100,
+    route:''
+  },
+  {
+    name:'WMF制造商',
+    image:ImageBaseUrl.value+'u87.png',
+    price:9,
+    route:''
+  },
+  {
+    name:'WMF制造商',
+    image:ImageBaseUrl.value+'u87.png',
+    price:9.9,
+    route:''
+  }
+])
+// 秒杀
+let spikeList = reactive<Array<any>>([
+
+])
+// 新鲜好物
+let freshGoodiesList = reactive<Array<any>>([
+
+])
+// 人气推荐
+let popularRecomList = reactive<Array<any>>([
+
+])
+// 专题精选
+let featuredTopicsList = reactive<Array<any>>([
+
+])
+// 猜你喜欢
+let guessLikeList = reactive<Array<any>>([
+
+])
 </script>
 
 <style lang="less" scoped>
-.home{
-  background-color: #fff;
-}
 .demonstration {
   color: var(--el-text-color-secondary);
 }
@@ -108,11 +157,11 @@ function notifyDetail():void{
 
 .func-box {
   width: 90%;
-  margin: 10px 5%;
+  padding: 10px 20px;
   display: flex;
   align-items: center;
   justify-content: space-between;
-
+  background-color: #fff;
   .item {
     display: flex;
     flex-direction: column;
@@ -127,9 +176,9 @@ function notifyDetail():void{
   display: flex;
   align-items: center;
   justify-content: space-between;
-
+  background-color: #fff;
   img {
-    margin-left: 5%;
+    margin-left: 20px;
   }
 
   .notify{
@@ -139,6 +188,7 @@ function notifyDetail():void{
     white-space: nowrap;
   }
   .btn {
-    margin-right: 5%;
+    margin-right: 20px;
   }
-}</style>
+}
+</style>
